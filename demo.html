@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo Plugin CNTN17</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="demo.js"></script>
+</head>
+<body>
+
+<form method="POST" action="process.php" enctype="multipart/form-data">
+
+Single image select:<br>
+<input type="file" name="test1" class="demo" data-jpreview-container="#demo-1-container">
+<div id="demo-1-container" class="jpreview-container"></div>
+
+
+Multiple images select:<br>
+<input type="file" name="test2" class="demo" multiple data-jpreview-container="#demo-2-container">
+<div id="demo-2-container" class="jpreview-container"></div>
+
+</form>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.demo').jPreview();
+	});
+</script>
+</body>
+</html>
